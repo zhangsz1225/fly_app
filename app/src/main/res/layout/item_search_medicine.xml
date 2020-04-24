@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:orientation="vertical"
+    android:gravity="center">
+    <TextView
+        android:id="@+id/tv_medicine_header"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/shape_circle_person_header"
+        android:text="三丰"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        />
+
+    <com.taikesoft.fly.business.common.view.CircleImageView
+        android:id="@+id/iv_medicine_header"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:visibility="gone"/>
+</LinearLayout>

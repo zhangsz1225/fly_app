@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/catalog"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:textColor="@color/txt_gray"
+        android:textSize="15sp" />
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/txt_gray_divider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp">
+
+        <CheckBox
+            android:id="@+id/cbChecked"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:background="@drawable/selector_checkbox_contact"
+            android:button="@null"
+            android:clickable="false"
+            android:focusable="false"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_medicine_header"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="13dp"
+            android:background="@drawable/shape_circle_person_header"
+            android:gravity="center"
+            android:text=" "
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <com.taikesoft.fly.business.common.view.CircleImageView
+            android:id="@+id/iv_medicine_header"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="13dp"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_title_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="13dp"
+                    android:singleLine="true"
+                    android:text="李超勤"
+                    android:textColor="@color/txt_black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="13dp"
+                android:background="@color/txt_gray_divider" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

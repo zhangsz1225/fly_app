@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="66dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlItem"
+        android:layout_width="match_parent"
+        android:layout_height="65dp">
+
+        <ImageView
+            android:id="@+id/ivNurseType"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="11dp"
+            android:layout_marginLeft="11dp"
+            android:src="@drawable/nurse_item_icon" />
+
+        <TextView
+            android:id="@+id/tvNurseItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ivNurseType"
+            android:layout_marginStart="9dp"
+            android:layout_marginLeft="9dp"
+            android:layout_toEndOf="@+id/ivNurseType"
+            android:layout_toRightOf="@+id/ivNurseType"
+            android:text="洗手"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tvFinishSta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ivNurseType"
+            android:layout_marginStart="9dp"
+            android:layout_marginLeft="9dp"
+            android:layout_toEndOf="@+id/tvNurseItem"
+            android:layout_toRightOf="@+id/tvNurseItem"
+            android:text="总数20，已完成33，已关闭0"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/tvNurseTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tvNurseItem"
+            android:layout_alignLeft="@+id/tvNurseItem"
+            android:layout_alignBottom="@+id/ivNurseType"
+            android:text="6:00-7:30"
+            android:textColor="#999999"
+            android:textSize="14sp" />
+
+        <com.taikesoft.fly.business.common.view.NumberProgressBar
+            android:id="@+id/progress_number"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_alignBottom="@+id/tvNurseTime"
+            android:layout_marginStart="9dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_toStartOf="@+id/tvNurseType"
+            android:layout_toLeftOf="@+id/tvNurseType"
+            android:layout_toEndOf="@+id/tvNurseTime"
+            android:layout_toRightOf="@+id/tvNurseTime" />
+
+        <TextView
+            android:id="@+id/tvNurseType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvNurseItem"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:text="个人卫生"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/rlItem"
+        android:background="#dcdcdc" />
+
+</LinearLayout>

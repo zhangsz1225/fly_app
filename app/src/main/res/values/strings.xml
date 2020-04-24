@@ -1,0 +1,111 @@
+<resources>
+
+    <string name="login_logo_desc">张家港市儿童福利院移动护理</string>
+    <string name="error_pwd_please_input_again">你输入的密码有误，请尝试重新输入</string>
+    <string name="error_user_please_input_again">你输入的用户名有误，请尝试重新输入</string>
+    <string name="prompt_email">请输入用户名</string>
+    <string name="prompt_password">请输入密码</string>
+    <string name="action_sign_in">登录</string>
+    <string name="login_qualitycheck_hotline_text">服务热线：</string>
+    <string name="login_qualitycheck_hotline_num">0512-12345678</string>
+    <string name="ourself_company">江苏新泰克软件有限公司</string>
+    <string name="error_please_input_username">请输入用户名！</string>
+    <string name="error_please_input_password">请输入密码！</string>
+    <string name="login_failed">网络连接失败，请检查您的网络设置</string>
+    <string name="login_pw_error">您输入的密码有误！</string>
+    <string name="login_user_error">您输入用户名有误！</string>
+    <string name="timeout_pleaselogin">网络请求超时，请重新登录</string>
+    <string name="please_selectfrom_album">从手机相册选择</string>
+    <!--个人信息-->
+    <string name="person_message">个人信息</string>
+    <string name="commit">提交</string>
+    <string name="notify_supervisor">通知监理</string>
+    <string name="modify_task">修改任务单</string>
+    <string name="clear_ache">清理缓存</string>
+    <string name="change_password">修改密码</string>
+    <string name="changepassword">修改密码</string>
+    <string name="prepassword">原密码：</string>
+    <string name="newpassword">新密码：</string>
+    <string name="makesurepassword">再次确认密码：</string>
+    <string name="please_enter_again_new_pw">请再次输入新密码！</string>
+    <string name="two_times_different">两次新密码不一致！</string>
+    <string name="pw_correct_success">密码修改成功！</string>
+    <string name="pw_corret_failed">密码修改失败!</string>
+    <string name="change_portrait_success">头像修改成功！</string>
+    <string name="change_portrait_failed">头像修改失败！</string>
+
+    <string name="upload_hide_photo_title">上传隐蔽图片</string>
+    <!--离线-->
+    <string name="networkstate">networkstate</string>
+    <string name="networkstate1">networkstate</string>
+    <string name="networkstate2">networkstate</string>
+    <string name="networkstate3">networkstate</string>
+    <string name="networkstate4">networkstate</string>
+    <string name="networkstate5">networkstate</string>
+    <string name="networkstate_on">networkstate_on</string>
+    <string name="networkstate_off">networkstate_off</string>
+
+    <!--bottom-->
+    <string name="title_home">首页</string>
+    <string name="title_nurse">护理</string>
+    <string name="title_child">儿童</string>
+    <string name="title_mine">我的</string>
+    <!--操作提示-->
+    <string name="submit_success">保存成功</string>
+    <string name="submit_fail">保存失败</string>
+    <string name="submit_modify_success">修改成功</string>
+    <string name="submit_modify_fail">修改失败</string>
+    <string name="submit_del_success">删除成功</string>
+    <string name="submit_del_fail">删除失败</string>
+    <!--二级页面标题-->
+    <string name="nurse_record_title">护理记录查询</string>
+    <string name="nurse_record_detail_title">护理记录</string>
+    <string name="change_clothes_modify_title">更换</string>
+    <string name="measure_temperature_modify_title">体温</string>
+    <string name="drink_water_modify_title">喝水喂奶</string>
+    <string name="have_snack_modify_title">水果点心</string>
+    <string name="night_patrol_modify_title">巡夜</string>
+    <string name="take_record_detail_title">服药</string>
+    <string name="record_delete_title">护理记录</string>
+    <string name="message_record_title">我的消息</string>
+    <string name="notice_title">通知公告</string>
+    <string name="message_detail_title">消息详情</string>
+    <string name="notice_detail_title">通知公告</string>
+    <string name="child_detail_title">儿童信息</string>
+    <!-- common -->
+    <string name="app_name">张家港市儿童福利院移动护理</string>
+    <string name="app_upgrade_tip_title">Release Notes (%1$s)</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="network_error">网络连接错误</string>
+    <string name="loadding_info">正在加载...</string>
+    <string name="select_type">选择类别</string>
+    <string name="select_date">选择日期</string>
+    <string name="token_invalid">token无效</string>
+    <string name="child_list_no_data">无儿童数据</string>
+    <string name="medicine_list_no_data">无药品数据</string>
+    <string name="please_check_network">网络不给力，请检查网络设置</string>
+    <string name="choose_children">选择儿童</string>
+    <string name="choose_medicine">选择药品</string>
+    <string name="child_no_img">暂无图片</string>
+    <string name="choose_finish">完成</string>
+    <string name="do_nurse">去护理</string>
+    <string name="child_detail">详情</string>
+    <string name="select_task">请选择任务</string>
+    <string name="operate_record_no_data">暂无护理记录</string>
+    <string name="operate_time">%1$s\n%2$s</string>
+    <string name="loading_view_no_data">暂无内容</string>
+    <string name="desc_check_mark">check mark</string>
+    <string name="number_sisution">生病%1$s个，住院%2$s个</string>
+    <string name="nurse_item_sisution">总数%1$s，已完成%2$s，已关闭%3$s</string>
+    <string name="number_ill">生病%1$s个</string>
+    <string name="number_in_hospital">住院%1$s个</string>
+    <string name="working_more">更多</string>
+    <string name="nurse_sta">今日护理</string>
+    <string name="child_sta_today">今日儿童</string>
+    <string name="child_sta">儿童状况（近一周）</string>
+    <string name="dash">-</string>
+    <string name="patrol_title">巡夜</string>
+    <string name="notice_sta">通知公告</string>
+    <string name="tip_patrol">请将NFC标签或贴纸靠近手机背面</string>
+</resources>

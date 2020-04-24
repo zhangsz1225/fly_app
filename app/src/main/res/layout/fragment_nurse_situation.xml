@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_titlebar_children" />
+
+        <RelativeLayout
+            android:id="@+id/rl_notice"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_notice"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:drawableLeft="@drawable/line"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="通知公告"
+                android:textColor="@color/app_color_blue"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <com.taikesoft.fly.business.common.view.NoticeView
+            android:id="@+id/notice_view"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_round"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:nvInterval="2000"
+            app:nvTextColor="@color/txt_black"
+            app:nvTextGravity="center" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/txt_gray_divider" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_nurse"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:drawableLeft="@drawable/line"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="护理工作"
+                android:textColor="@color/app_color_blue"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/txt_gray_divider" />
+
+        <HorizontalScrollView
+            android:id="@+id/hs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <GridView
+                    android:id="@+id/gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:stretchMode="spacingWidthUniform"></GridView>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/txt_gray_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.taikesoft.fly.business.common.view.MyScrollView
+                        android:id="@+id/slView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fillViewport="true"
+                        android:scrollbars="none">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:visibility="visible">
+
+                                <RelativeLayout
+                                    android:id="@+id/relativeLayout0"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/tv_task_sta"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="15dp"
+                                            android:layout_weight="1"
+                                            android:drawableLeft="@drawable/line"
+                                            android:text="@string/nurse_sta"
+                                            android:textColor="@color/app_color_blue"
+                                            android:textSize="10sp" />
+
+                                        <TextView
+                                            android:id="@+id/tv_update_time"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginRight="15dp"
+                                            android:background="@drawable/btn_com_selector"
+                                            android:text="更新于16:00"
+                                            android:textColor="@color/txt_gray_shallow"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/rlItem"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/relativeLayout0">
+
+                                    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+                                        android:id="@+id/refresh_layout"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <androidx.recyclerview.widget.RecyclerView
+                                            android:id="@+id/recyclerview"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="0dp"
+                                            android:layout_weight="1"
+                                            android:scrollbars="none"></androidx.recyclerview.widget.RecyclerView>
+                                    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_child_sta_today"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="15dp"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/line"
+                                        android:text="@string/child_sta_today"
+                                        android:textColor="@color/app_color_blue"
+                                        android:textSize="16sp" />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1px"
+                                    android:background="@color/txt_gray_divider" />
+
+                                <TextView
+                                    android:id="@+id/tv_child_today"
+                                    android:layout_width="250dp"
+                                    android:layout_height="40dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="14dp"
+                                    android:gravity="center_vertical"
+                                    android:text="生病1人"
+                                    android:textColor="@color/txt_black"
+                                    android:textSize="12sp" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1px"
+                                    android:background="@color/txt_gray_divider" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="275dp"
+                                android:background="@color/white"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_child_sta"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="15dp"
+                                        android:layout_weight="1"
+                                        android:drawableLeft="@drawable/line"
+                                        android:text="@string/child_sta"
+                                        android:textColor="@color/app_color_blue"
+                                        android:textSize="10sp" />
+
+                                    <TextView
+                                        android:id="@+id/tv_more"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="15dp"
+                                        android:background="@drawable/btn_com_selector"
+                                        android:text="@string/working_more"
+                                        android:textColor="@color/txt_gray_shallow"
+                                        android:textSize="14sp" />
+
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1px"
+                                    android:background="@color/txt_gray_divider" />
+
+                                <com.taikesoft.fly.business.widget.lineChart.LineChartLayout
+                                    android:id="@+id/include"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="215dp"
+                                    android:orientation="vertical">
+
+                                </com.taikesoft.fly.business.widget.lineChart.LineChartLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp"
+                                    android:background="@color/bg_no_data"
+                                    android:orientation="vertical"></RelativeLayout>
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvWarn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="45dp"
+                                        android:drawableLeft="@drawable/line"
+                                        android:gravity="center_vertical"
+                                        android:paddingLeft="15dp"
+                                        android:text="推送消息"
+                                        android:textColor="@color/app_color_blue"
+                                        android:textSize="16sp" />
+
+                                    <TextView
+                                        android:id="@+id/tvWarnHistory"
+                                        android:layout_width="80dp"
+                                        android:layout_height="45dp"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginRight="10dp"
+                                        android:gravity="center"
+                                        android:paddingLeft="15dp"
+                                        android:text="历史消息"
+                                        android:textColor="#999999"
+                                        android:textSize="14sp" />
+
+                                </RelativeLayout>
+
+                                <View
+                                    android:id="@+id/view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1px"
+                                    android:layout_marginTop="45dp"
+                                    android:background="#dcdcdc" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/view"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:orientation="vertical">
+
+                                    <com.taikesoft.fly.business.common.view.ScrollListView
+                                        android:id="@+id/lv_content"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/white"
+                                        android:divider="@null"
+                                        android:listSelector="@android:color/transparent">
+
+                                    </com.taikesoft.fly.business.common.view.ScrollListView>
+
+                                    <include layout="@layout/layout_no_data" />
+
+
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </com.taikesoft.fly.business.common.view.MyScrollView>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

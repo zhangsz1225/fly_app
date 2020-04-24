@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="20dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="@dimen/login_hotline_margin_top"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_qualitycheck_hotline_text"
+        android:textColor="@color/login_hotline_textcolor" />
+
+    <TextView
+        android:id="@+id/tv_tel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:text="@string/login_qualitycheck_hotline_num"
+        android:textColor="@color/login_hotline_textcolor" />
+</LinearLayout>

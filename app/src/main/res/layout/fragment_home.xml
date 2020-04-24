@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+    <include layout="@layout/layout_titlebar_children" />
+
+    <com.stx.xhb.xbanner.XBanner
+        android:id="@+id/xbanner_view"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:AutoPlayTime="3000"
+        app:isAutoPlay="true"
+        app:pointNormal="@drawable/shape_point_normal"
+        app:pointSelect="@drawable/shape_point_select"
+        app:pointsPosition="CENTER"
+        app:tipTextSize="12sp" />
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="vertical">
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="45dp"
+          android:gravity="center_vertical"
+          android:paddingLeft="15dp"
+          android:text="工作"
+          android:textColor="#333333"
+          android:textSize="16sp" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="45dp"
+        android:background="#dcdcdc" />
+    <HorizontalScrollView
+        android:id="@+id/hs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f5f5f5"
+        android:scrollbars="none">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+        <GridView
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchMode="spacingWidthUniform"></GridView>
+      </LinearLayout>
+    </HorizontalScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#f5f5f5">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="35dp"
+          android:layout_marginLeft="16dp"
+          android:gravity="center"
+          android:text="我的今日护理"
+          android:textSize="12sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <com.flyco.tablayout.SlidingTabLayout
+          android:id="@+id/stl_nurse"
+          android:layout_width="match_parent"
+          android:layout_height="48dp"
+          android:background="@color/violet"
+          tl:tl_textAllCaps="true"
+          tl:tl_textBold="BOTH"
+          tl:tl_textsize="14sp" />
+    </LinearLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vp_nurse"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"/>
+  </LinearLayout>
+</ScrollView>

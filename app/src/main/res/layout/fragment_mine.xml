@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/white"
+      android:orientation="vertical">
+
+    <include layout="@layout/layout_titlebar_application" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="161dp"
+        android:background="@color/white"
+        android:gravity="center">
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:gravity="center">
+        <TextView
+            android:id="@+id/tv_person_header"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:background="@drawable/shape_circle_person_header"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="gone"/>
+        <com.taikesoft.fly.business.common.view.CircleImageView
+            android:id="@+id/iv_portrait"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:src="@mipmap/about_logo"
+            android:visibility="gone"/>
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|left"
+            android:gravity="center|left"
+            android:text="admin"
+            android:textColor="@color/txt_black"
+            android:textSize="@dimen/txt_little_size"></TextView>
+      </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/background_color_gray_shallow"></View>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+
+        <com.qmuiteam.qmui.widget.grouplist.QMUICommonListItemView
+            android:id="@+id/qmui_item_record"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qmui_list_item_height"
+            app:qmui_accessory_type="chevron"
+            app:qmui_common_list_title_color="@color/txt_black"
+            app:qmui_orientation="vertical"></com.qmuiteam.qmui.widget.grouplist.QMUICommonListItemView>
+
+        <View
+            android:id="@+id/view0"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/txt_gray_divider" />
+
+        <com.qmuiteam.qmui.widget.grouplist.QMUICommonListItemView
+            android:id="@+id/qmui_item_msg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qmui_list_item_height"
+            app:qmui_accessory_type="chevron"
+            app:qmui_common_list_title_color="@color/txt_black"
+            app:qmui_orientation="vertical" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="10px"
+            android:background="@color/txt_gray_divider" />
+
+        <com.qmuiteam.qmui.widget.grouplist.QMUICommonListItemView
+            android:id="@+id/qmui_item_notice"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qmui_list_item_height"
+            app:qmui_accessory_type="chevron"
+            app:qmui_orientation="vertical" />
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="20px"
+            android:background="@color/txt_gray_divider" />
+        <com.qmuiteam.qmui.widget.grouplist.QMUICommonListItemView
+            android:id="@+id/qmui_item_logout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qmui_list_item_height"
+            app:qmui_accessory_type="chevron"
+            app:qmui_common_list_title_color="@color/orangered"
+            app:qmui_orientation="vertical" />
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/txt_gray_divider" />
+      </LinearLayout>
+    </ScrollView>
+  </LinearLayout>
+</RelativeLayout>
